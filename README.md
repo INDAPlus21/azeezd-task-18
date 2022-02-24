@@ -13,7 +13,7 @@ NOTE! There might be some sneaky bugs. Mostly due to encoding.
 ## Running
 Run the `construct.bat` (or `construct.sh` if you use that). Wait for the construction.
 
-Now you can use the concordance using the `concordance <word>` command.
+Now you can use the concordance using the `concordance <word>` (Or `./concordance <word>` if you are using Linux) command.
 
 ## Technique used
 Creates a file containing tokens of the big file (`korpus`) and store their byte offset from start. This is then compressed into one line with all offsets in that line, this file is called the `index`.

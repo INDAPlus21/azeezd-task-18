@@ -7,11 +7,12 @@
 #define ALPHABET "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÅÖ"
 #define OFFSET ('a' - 'A')
 
-static long pos = 0;
-static unsigned char u2l[256] = {0};
+static long pos = 0; // Position in file
+static unsigned char u2l[256] = {0}; // Upper to low. Storing all possible 8-bit characters
 
 static void init()
 {
+    // Converting all upper to lower and setting all non alphabetical characters to 0 (in order to ignore them)
     unsigned char *s = NULL;
     unsigned char ch;
     for (unsigned char *s = (unsigned char *)ALPHABET; *s; s++)
@@ -31,26 +32,30 @@ int main(int argc, char const *argv[])
 {
     init();
     unsigned char buffer[BUFFER_SIZE] = {"\0"};
-    unsigned char starting[4] = {'\0'};
-    unsigned char *s = NULL;
-    int c;
-    long start;
+    unsigned char starting[4] = {'\0'}; // The 3 letter start + 1 for null terminator
+    unsigned char *buf_ptr = NULL;
+    int curr_char;
+    long start; // Where the word starts
     do
     {
-        for (c = readChar(); c != EOF && u2l[c] == 0; c = readChar());
-        if (c == EOF)
+        // Skip non alphabetical characters
+        for (curr_char = readChar(); curr_char != EOF && u2l[curr_char] == 0; curr_char = readChar());
+        if (curr_char == EOF)
             break;
 
-        start = pos - 1;
-        s = buffer;
+        start = pos - 1; // Save position of the word to print later on
 
-        *s++ = u2l[c];
-        for (c = readChar(); c != EOF && u2l[c]; c = readChar())
-            *s++ = u2l[c];
-        *s = '\0';
-        if (c == EOF)
+        // Get the word currently pointed at. Stop at non alphabetical character
+        buf_ptr = buffer;
+        *buf_ptr++ = u2l[curr_char];
+        for (curr_char = readChar(); curr_char != EOF && u2l[curr_char]; curr_char = readChar())
+            *buf_ptr++ = u2l[curr_char];
+        *buf_ptr = '\0';
+
+        if (curr_char == EOF)
             break;
 
+        // Compare first three letters (or less if shorter)
         if (!CMP_START(buffer, starting))
         {
             starting[0] = buffer[0];
@@ -65,7 +70,7 @@ int main(int argc, char const *argv[])
             printf("%s %ld\n", starting, start);
         }
 
-    } while (c != EOF);
+    } while (curr_char != EOF);
 
     return 0;
 }

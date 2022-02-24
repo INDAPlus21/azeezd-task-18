@@ -1,7 +1,9 @@
 # Azeez Daoud Task 18
 
 NOTE! The techniques used are heavily inspired by ADK Lecture 3 on "Latmanhashning" and the tokenizer style provided.
+
 NOTE! All files prefixed with an underscore `_` were provided by the assignment thus I have no written them.
+
 NOTE! There might be some sneaky bugs. Mostly due to encoding.
 
 ## Requirements
@@ -11,10 +13,13 @@ NOTE! There might be some sneaky bugs. Mostly due to encoding.
 - Svenska or any godtycklig translator
 
 ## Running
-Run the `construct.bat` (or `construct.sh` if you use that). Wait for the construction.
+Unzip the `_korpus.zip` file and drag the `_korpus` text file to the main project directory. (It is important to have `_korpus` on the same level as the other program files).
+
+Run the `construct.bat` (or `construct.sh` if you use that). 
+
+Wait for the construction.
 
 Now you can use the concordance using the `concordance <word>` (Or `./concordance <word>` if you are using Linux) command.
-
 ## Technique used
 Creates a file containing tokens of the big file (`korpus`) and store their byte offset from start. This is then compressed into one line with all offsets in that line, this file is called the `index`.
 

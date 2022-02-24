@@ -27,6 +27,6 @@ Thenafter the Index is scanned through gathering where three-letter-startings ar
 
 To find the occurances. The concordance reads the word's first three letters, checks the `magic` file, then jumps to the `index` finding the correct word. Then jumping the to `korpus` for each offset in the `index` file printing at max 25 occruances of the word along side 30 characters around the word.
 
-This is an approxmiate demonstrative image of the jumping between files.
+This is an approximate image of the jumping between files.
 
 <img src="images/concordance_system.png" width=700>

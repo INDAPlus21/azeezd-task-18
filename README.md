@@ -10,7 +10,7 @@ NOTE! There might be some sneaky bugs. Mostly due to encoding.
 - The Zig Language Compiler. [Here](https://ziglang.org/)
 - GNU Compiler Collection (Just any C compiler)
 - A computer
-- Svenska or any godtycklig translator
+- Svenska
 
 ## Running
 Unzip the `_korpus.zip` file and drag the `_korpus` text file to the main project directory. (It is important to have `_korpus` on the same level as the other program files).

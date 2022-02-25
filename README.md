@@ -18,13 +18,11 @@ NOTE! There might be some sneaky bugs. Mostly due to encoding.
 <img src="images/extract.png" width=500>
 <img src="images/drag.png" width=500> 
 
-### 2 Run the `./construct.bat` (or `./construct.sh` if you use Bash, if you use Linux you have to give executeable permission as well).
+### 2 Run the `./construct.bat` (or `./construct.sh` if you use Bash, if you use Linux you have to give executeable permission as well). Then wait for construction.
 
 <img src="images/constructing.png" width=500> 
 
-### 3 Wait for the construction.
-
-### 4 Now you can use the concordance using the `./concordance <word>` command
+### 3 Now you can use the concordance using the `./concordance <word>` command
 
 
 <img src="images/using.png" width=500> 

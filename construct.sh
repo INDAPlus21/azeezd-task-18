@@ -12,7 +12,7 @@ printf "Generating Magic File...\n"
 gcc magi.c
 ./a.out < index > magic
 
-printf "Cleaning up!"
+printf "Cleaning up!\n"
 rm ./a.out
 gcc concordan.c -o concordance
 

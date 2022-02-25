@@ -13,13 +13,24 @@ NOTE! There might be some sneaky bugs. Mostly due to encoding.
 - Svenska
 
 ## Running
-Unzip the `_korpus.zip` file and drag the `_korpus` text file to the main project directory. (It is important to have `_korpus` on the same level as the other program files).
+### 1 Unzip the `__korpus.zip` file and drag the `_korpus` text file to the main project directory. (It is important to have `_korpus` on the same level as the other program files).
 
-Run the `construct.bat` (or `construct.sh` if you use that). 
+<img src="images/extract.png" width=500>
+<img src="images/drag.png" width=500> 
 
-Wait for the construction.
+### 2 Run the `./construct.bat` (or `./construct.sh` if you use Bash, if you use Linux you have to give executeable permission as well).
 
-Now you can use the concordance using the `concordance <word>` (Or `./concordance <word>` if you are using Linux) command.
+<img src="images/constructing.png" width=500> 
+
+### 3 Wait for the construction.
+
+### 4 Now you can use the concordance using the `./concordance <word>` command
+
+
+<img src="images/using.png" width=500> 
+<img src="images/using2.png" width=500> 
+<img src="images/using_no_word.png" width=500> 
+
 ## Technique used
 Creates a file containing tokens of the big file (`korpus`) and store their byte offset from start. This is then compressed into one line with all offsets in that line, this file is called the `index`.
 

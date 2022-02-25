@@ -217,14 +217,14 @@ int main(int argc, unsigned char *argv[])
     long m_idx = getMagicPos(word);
     if (m_idx == -1) // Word not found
     {
-        printf("Ordet %s finns inte i filen.", word);
+        printf("Ordet %s finns inte i filen\n", word);
         return 0;
     }
 
     long i_idx = getIndexPos(m_idx, word);
     if (i_idx == -1) // Word not found
     {
-        printf("Ordet %s finns inte i filen.", word);
+        printf("Ordet %s finns inte i filen\n", word);
         return 0;
     }
 

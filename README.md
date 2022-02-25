@@ -18,7 +18,7 @@ NOTE! There might be some sneaky bugs. Mostly due to encoding.
 <img src="images/extract.png" width=500>
 <img src="images/drag.png" width=500> 
 
-### 2 Run the `./construct.bat` (or `./construct.sh` if you use Bash, if you use Linux you have to give executeable permission as well). Then wait for construction.
+### 2 Run the `./construct.bat` (or `./construct.sh` if you use Bash, if you use Linux you have to give executeable permission as well using `chmod +x ./construct.sh`). Then wait for construction.
 
 <img src="images/constructing.png" width=500> 
 
